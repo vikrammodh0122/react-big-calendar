@@ -33,7 +33,7 @@ function CalOverlay({
       rootClose
       flip
       show
-      placement="bottom"
+      placement="top"
       onHide={onHide}
       target={overlay.target}
     >

@@ -72,8 +72,34 @@ function Pop({
   }
   return (
     <div style={style} className="rbc-overlay" ref={popperRef}>
-      <div className="rbc-overlay-header">
-        {localizer.format(slotStart, 'dayHeaderFormat')}
+      <div className="rbc-overlay-header" style={{ position: 'relative' }}>
+        {localizer
+          .format(slotStart, 'dayHeaderFormat')
+          .split(' ')
+          .map((text) => (
+            <p>{text}</p>
+          ))}
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="overlay-cross-icon"
+          onClick={show}
+        >
+          <path
+            d="M8.46445 15.5355L15.5355 8.46446"
+            stroke="#383838"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M8.46446 8.46447L15.5355 15.5355"
+            stroke="#383838"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </svg>
       </div>
       {events.map((event, idx) => (
         <EventCell
