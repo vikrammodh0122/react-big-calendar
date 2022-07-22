@@ -1,6 +1,6 @@
 {
   "name": "metaboly-react-big-calendar",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Calendar! with events",
   "author": {
     "name": "Jason Quense",
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/vikrammodh0122/react-big-calendar.git"
   },
+  "types": "lib/index.d.js",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "dist/react-big-calendar.esm.js",

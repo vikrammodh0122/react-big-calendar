@@ -21,6 +21,8 @@ console.log(chalk.blue(`Copying SASS files to 'lib'`))
 // and since we don't currently use CSS modules...
 await fs.copy('./src/sass', './lib/sass')
 console.log(chalk.blue(`...and the 'Add-on' SASS`))
+// Added types
+await fs.copy('./src/index.d.ts', './lib/index.d.ts')
 // don't forget DnD
 await fs.copy('./src/addons/dragAndDrop/styles.scss', './lib/addons/dragAndDrop/styles.scss')
 console.log(chalk.blue('Now we will build some CSS'))
